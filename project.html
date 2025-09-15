@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timothy Nelson - Creative Developer & Designer</title>
+    <meta name="description" content="Portfolio of Timothy Nelson - Creative Developer & UI/UX Designer">
     <style>
         * {
             margin: 0;
@@ -511,7 +512,7 @@
             <h2>Let's Work Together</h2>
             <div class="contact-content">
                 <div class="contact-form">
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
@@ -598,9 +599,10 @@
         });
 
         // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Thank you for your message! I will get back to you within 24 hours.');
+            this.reset();
         });
 
         // Counter animation for stats
